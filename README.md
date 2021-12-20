@@ -20,4 +20,4 @@ Create a custom calculator that suggests a donation based on an indivdual's uniq
 
 
 ## Demo:
-* [Try it out here](https://JackWilkin.github.io/hnlt-calculator/)
+* [Try it out here](https://JackWilkin.github.io/hnlt-boston/)
