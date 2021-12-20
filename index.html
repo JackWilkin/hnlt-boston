@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honor Native Land Tax Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    <script src='index.js' defer ></script>
+</head>
+<body>
+    <section>
+        <h2>Honor Native Land Tax Calculator</h2>
+        <p>Welcome to the Honor Native Land Tax calculator! 
+        We created this calculator to help you think about your 
+        relationship to money and the land you’re on, because we 
+        know that money and finances can bring up a lot for each of us.</p>
+        <p>One of the goals of this project is to redistribute wealth 
+        from settlers to Indigenous people. As part of this process, it 
+        is important that we as settlers reckon with our entitlement to 
+        and possession of wealth. <span><a href='https://resourcegeneration.org/breakdown-of-class-characteristics-income-brackets/' target="_blank">Our class conditioning strongly shapes 
+        our values, beliefs, and expectations.</a></span> This calculator is a tool 
+        to help bring some clarity about a meaningful monthly contribution. 
+        We encourage you to think about your individual, personal relationship 
+        to the land and to settler colonialism as you consider your contribution.</p> 
+        <p>The calculator is designed for individuals; if you share finances in your 
+        household, we recommend that each adult fill out the calculator and add the 
+        suggested amounts together as a starting point.</p>
+        <p>This calculator is not perfect or “the truth” about what your 
+        contribution should be—you know your circumstances best. If they
+        are not reflected in the options that we have laid out, pick those 
+        that are closest to your experience. If your situation is in flux, 
+        do your best and know you can always increase or decrease your donation 
+        amount as needed.</p>
+    </section>
+    <section class = 'calculator'>
+        <form>
+            <div>
+                <label for='income'>Household Income: </label>
+                <p class='info incomeInfo'><b>Consider all sources of income including, but not limited to: jobs, gigs, rental income, dividends, commissions, money you currently get from family members etc.</b></p>
+                <select name='income' id='income' class="custom-select custom-select-sm" required>
+                    <option disabled selected value> Choose your option </option>
+                    <option value=1>Less than $30,000</option>
+                    <option value=2>$30,000 - $60,000</option>
+                    <option value=3>$60,000 - $100,000</option>
+                    <option value=4>$100,000 - $150,00</option>
+                    <option value=5>$150,000 - $200,000</option>
+                    <option value=6>$200,000 - $300,000</option>
+                    <option value=7>$300,000 - $500,000</option>
+                    <option value=8>More than $500,000</option>
+                </select> 
+            </div>
+            <div>
+                <label for='rent'>Housing: </label>
+                <p class='info rentInfo'><b>Consider your current living situation, including whether you rent or own</b></p>
+                <select name='rent' id='rent' class="custom-select custom-select-sm" required>
+                    <option disabled selected value> Choose your option </option>
+                    <option value=1>Housing insecure</option>
+                    <option value=2>Rent</option>
+                    <option value=3>Own with live-in renters</option>
+                    <option value=4>Free Rent</option>
+                    <option value=5>Own home with mortgage</option>
+                    <option value=6>Own one home outright or own two residences with mortgages</option>
+                    <option value=7>Own multiple properties with mortgages</option>
+                    <option value=8>Own multiple properties outright (with no mortgages)</option>
+                </select>
+            </div>
+            <div>
+                <label for='debt'>Debt: </label>
+                <p class='info debtInfo'><b>Consider all student, medical, and consumer debt that you currently have. Do not include mortgage debt, this is accounted for in the housing category.</b></p>
+                <select name='debt' id='debt' class="custom-select custom-select-sm" required>
+                    <option disabled selected value> Choose your option </option>
+                    <option value=1>More than $200,000</option>
+                    <option value=2>$50,000 - $200,000</option>
+                    <option value=3>$25,000 - $50,000</option>
+                    <option value=4>$Less than $25,000</option>
+                    <option value=5>None</option>
+                </select>
+            </div>
+            <div>
+                <label for='wealth'>Family Wealth: </label>
+                <p class='info wealthInfo'><b>Consider wealth that you currently have access to because of family or other relationships, as well as what you might inherit or owe when family members pass away. Wealth you have access to or may inherit includes: money, gifts, stocks, land and property, trusts, cars, etc. Negative family wealth means you don’t inherit anything of value and have responsibility to pay expenses that come up when a family member dies, like funeral, casket, legal fees, clergy, etc.</b></p>
+                <select name='wealth' id='wealth' class="custom-select custom-select-sm" required>
+                    <option disabled selected value> Choose your option </option>
+                    <option value=1>Negative wealth (debt)</option>
+                    <option value=2>None</option>
+                    <option value=3>Up to $50,000</option>
+                    <option value=4>$50,000 - $100,000</option>
+                    <option value=5>$100,000 - $500,000</option>
+                    <option value=6>$100,000 - $500,000</option>
+                    <option value=7>$500,000 - $2,000,000</option>
+                    <option value=8>$2,000,000 - $5,000,000</option>
+                    <option value=9>More than $5,000,000</option>
+                </select>
+            </div>
+            <div>
+                <label for='edu'>Level of Education: </label>
+                <p class='info eduInfo'><b>Consider your current status. We acknowledge that not all advanced degrees are created equally—some have higher earning potential and social capital than others. We’ve tried to account for this and we also encourage you to think about your degree(s) in terms of social hierarchy (e.g. MDs and JDs often have higher earning potential than MFAs).</b></p>
+                <select name='edu' id='edu' class="custom-select custom-select-sm" required>
+                    <option disabled selected value> Choose your option </option>
+                    <option value=1>No high school diploma or GED</option>
+                    <option value=2>High school diploma or GED</option>
+                    <option value=3>Associates Degree or some college</option>
+                    <option value=4>College degree (BA, BS, RN)</option>
+                    <option value=5>One advanced degree (that does not significantly impact earning potential)</option>
+                    <option value=6>One advanced degree (that does significantly impact earning potential)</option>
+                    <option value=7>Two or more advanced degrees</option>
+                </select>
+            </div>
+            <div>
+                <label for='dependents'>Number of Dependents: </label>
+                <p class='info dependentsInfo'><b>Consider the people who rely on you for financial support, including children, elders, or others.</b></p>
+                <select name='dependents' id='dependents' class="custom-select custom-select-sm" required>
+                    <option disabled selected value> Choose your option </option>
+                    <option value=1>7+</option>
+                    <option value=2>6</option>
+                    <option value=3>5</option>
+                    <option value=4>2-4</option>
+                    <option value=5>1</option>
+                    <option value=6>0</option>
+                </select>
+            </div>
+            <div>
+                <label for='savings'>Savings:</label>
+                <p class='info savingsInfo'><b>Consider the money that is in your savings account, retirement funds (401k, IRA, SEP, etc), investments in stocks, bonds, and mutual funds.</b></p>
+                <select name='savings' id='savings' class="custom-select custom-select-sm" required>
+                    <option disabled selected value> Choose your option </option>
+                    <option value=1>Less than $500</option>
+                    <option value=2>$500 - $3,000</option>
+                    <option value=3>$3,000 - $10,000</option>
+                    <option value=4>$10,000 - $50,000</option>
+                    <option value=5>$50,000 - $250,000</option>
+                    <option value=6>$250,000 - $1,000,000</option>
+                    <option value=6>$1,000,000 - $2,500,000</option>
+                    <option value=7>More than $2,500,000</option>
+                </select>
+            </div>
+        </form>
+        <div id='output' class='hidden'>
+        </div>
+    </section>
+        <!-- <section>
+        <h3>About the Categories:</h3>
+        <h5>Individual Income</h5>
+        <p>Consider all sources of income including, but not limited to: jobs, gigs, 
+        rental income, dividends, commissions, money you currently get from family 
+        members etc. </p>
+
+        <h5>Housing</h5>
+        <p>Consider your current living situation, including whether you rent or own.</p>
+
+        <h5>Debt</h5>
+        <p>Consider all student, medical, and consumer debt that you currently have. Do 
+        not include mortgage debt, this is accounted for in the housing category. </p>
+
+        <h5>Family Wealth</h5>
+        <p>Consider wealth that you currently have access to because of family or other 
+        relationships, as well as what you might inherit or owe when family members pass 
+        away. Wealth you have access to or may inherit includes: money, gifts, stocks, 
+        land and property, trusts, cars, etc. Negative family wealth means you don’t inherit 
+        anything of value and have responsibility to pay expenses that come up when a family 
+        member dies, like funeral, casket, legal fees, clergy, etc.</p>
+
+        <h5>Level of Education</h5>
+        <p>Consider your current status. We acknowledge that not all advanced degrees are 
+        created equally—some have higher earning potential and social capital than others. 
+        We’ve tried to account for this and we also encourage you to think about your 
+        degree(s) in terms of social hierarchy (e.g. MDs and JDs often have higher earning 
+        potential than MFAs).</p>
+
+        <h5>Number of Dependents</h5>
+        <p>onsider the people who rely on you for financial support, including children, elders, 
+        or others.</p>
+
+        <h5>Savings</h5>
+        <p>Consider the money that is in your savings account, retirement funds (401k, IRA, SEP, etc), 
+        investments in stocks, bonds, and mutual funds.</p>
+    </section> -->
+</body>
+</html>
